@@ -1,4 +1,6 @@
-require_relative 'lib/json/stream/version'
+$:.push File.expand_path('../lib', __FILE__)
+require 'rake'
+require 'json/stream/version'
 
 Gem::Specification.new do |s|
   s.name    = "json-stream"
