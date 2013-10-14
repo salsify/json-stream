@@ -20,8 +20,8 @@ For example, streaming and processing large map/reduce views from Apache CouchDB
   s.email        = ["david.malcom.graham@gmail.com"]
   s.homepage     = "http://dgraham.github.com/json-stream/"
 
-  s.files        = FileList['[A-Z]*', "{lib}/**/*"]
-  s.test_files   = FileList["{test}/**/*test.rb"]
+  s.files = Dir["lib/**/*"] + ["LICENSE", "Rakefile", "README"]
+  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = "lib"
 
   s.add_development_dependency "rake"

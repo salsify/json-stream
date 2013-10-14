@@ -1,6 +1,6 @@
 require 'rake'
 require 'rake/clean'
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 require 'rake/testtask'
 require_relative 'lib/json/stream/version'
 
@@ -30,7 +30,7 @@ For example, streaming and processing large map/reduce views from Apache CouchDB
   s.required_ruby_version = '>= 1.9.2'
 end
 
-Rake::GemPackageTask.new(spec) do |pkg|
+Gem::PackageTask.new(spec) do |pkg|
   pkg.need_tar = true
 end
 
